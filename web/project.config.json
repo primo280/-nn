@@ -1,0 +1,7 @@
+{
+  "description": "project config file",
+  "projectname": "web",
+  "setting": {
+    "es5": false
+  }
+}

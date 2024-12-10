@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Hospital Website Design Tutorial</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Loader Section -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- header navbar section start  -->
+    <header>
+        <!-- logo name  -->
+        <a href="#" class="logo"><span>D</span>octors <span>C</span>ares.</a>
+
+
+
+
+        <div class="notification-container">
+            <i class="fas fa-bell notification-icon"></i>
+            <span class="notification-count">0</span>
+        </div>
+        <!-- navbar link  -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="patient_download.html">Mon Dossier</a></li>
+                <li><a href="#about">Notifications</a></li>
+            </ul>
+        </nav>
+
+        <div class="fas fa-bars"></div>
+    </header>
+    <!-- header navbar section end  -->
+
+    <!-- home section start  -->
+    <section id="home" class="home">
+        <div class="row">
+            <div class="content">
+                <h1><span>Stay</span> Safe, <span>Stay</span> Healthy.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa, officiis.</p>
+                <a href="#"><button class="button">read more</button></a>
+            </div>
+            <!-- home images  -->
+            <div class="images">
+                <img src="./images/home.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- home section end  -->
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- custom js file link  -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+
+
+<style>
+    .notification-container {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px; /* Adjust spacing */
+        cursor: pointer;
+    }
+    
+    .notification-icon {
+        font-size: 24px;
+        color: #333;
+    }
+    
+    .notification-count {
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        background-color: #3498db;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 50%;
+        padding: 3px 6px;
+        display: none; /* Hidden initially */
+    }
+    
+</style>

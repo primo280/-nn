@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Responsive Hospital Website Design Tutorial</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./css/style.css">
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .user-info {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e9f7ef;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-info p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .user-info p strong {
+            color: #333;
+        }
+
+        .download-section {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-section h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #3498db;
+        }
+
+        .download-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .download-section li {
+            margin-bottom: 10px;
+        }
+
+        .download-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-section a:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loader Section -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- header navbar section start  -->
+    <header>
+        <!-- logo name  -->
+        <a href="#" class="logo"><span>D</span>octors <span>C</span>ares.</a>
+
+        <!-- navbar link  -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="patient_download.html">Mon Dossier</a></li>
+                <li><a href="#about">Notifications</a></li>
+            </ul>
+        </nav>
+
+        <div class="fas fa-bars"></div>
+    </header>
+    <!-- header navbar section end  -->
+
+    <body>
+        <div class="container">
+            <h2>Téléchargement des Dossiers Médicaux</h2>
+    
+            <!-- Informations personnelles de l'utilisateur -->
+            <div class="user-info">
+                <p><strong>Nom :</strong> Dupont</p>
+                <p><strong>Prénom :</strong> Jean</p>
+            </div>
+    
+            <!-- Section pour télécharger les dossiers médicaux -->
+            <div class="download-section">
+                <h3  style="font-size: 15px;">Vos dossiers médicaux</h3>
+                <ul id="medicalRecordsList">
+                    <!-- Les dossiers médicaux seront ajoutés ici par JavaScript -->
+                </ul>
+            </div>
+        </div>
+    
+        <script>
+            // Données simulées pour les dossiers médicaux
+            const medicalRecords = [
+                { name: "Dossier Médical 2023", file: "medical_record_2023.pdf" },
+            ];
+    
+            // Fonction pour afficher les dossiers médicaux
+            function displayMedicalRecords() {
+                const medicalRecordsList = document.getElementById('medicalRecordsList');
+                medicalRecords.forEach(record => {
+                    const li = document.createElement('li');
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = record.file;
+                    downloadLink.textContent = record.name;
+                    downloadLink.download = record.file; // Permet de télécharger le fichier
+                    li.appendChild(downloadLink);
+                    medicalRecordsList.appendChild(li);
+                });
+            }
+    
+            // Afficher les dossiers médicaux au chargement de la page
+            displayMedicalRecords();
+        </script>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- custom js file link  -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
